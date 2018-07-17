@@ -5,7 +5,8 @@ import { fetchPosts } from "../actions/postActions"
 
 const mapStateToProps = state => {
   return {
-    posts: state.posts.items
+    posts: state.posts.items,
+    newPost: state.posts.item
   }
 }
 
@@ -37,7 +38,8 @@ const PostItem = props => (
 
 Posts.propTypes = {
   fetchPosts: PropTypes.func.isRequired,
-  posts: PropTypes.array.isRequired
+  posts: PropTypes.array.isRequired,
+  newPost: PropTypes.object
 }
 
 export default connect(
